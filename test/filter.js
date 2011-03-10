@@ -42,6 +42,31 @@ module.exports = testCase({
 		filter(req,res,next);
 	},
 	
+	testLastSlashIsRemovedWithGetParams: function(test) {
+	
+		test.expect(1);
+		
+		var filter = this.normalizer({filterChain:['stripLastSlash']});
+		var fixture = {'input':'/abcd/?abcd=123','output':'/abcd?abcd=123'};
+		var req = {};
+		req.originalUrl = fixture['input'];
+
+		var res = {};
+		res.redirect = function(location,code) {
+			test.ok(location==fixture['output'],'Failure expected: '+fixture['output']+' but got '+location);
+			test.done();
+		}
+		
+		var next = function(data){
+			test.ok(false,'Test failed should never reach next');
+			test.done();
+		};
+		
+		// Start filter;
+		filter(req,res,next);
+	},
+	
+	
 	testLastSlashStillExists: function(test) {
 	
 		test.expect(1);
