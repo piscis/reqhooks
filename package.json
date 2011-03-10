@@ -3,9 +3,7 @@
   "description": "A small set of filters that can be used to enforce url-schemas",
   "version": "0.0.1alpha",
   "author": "Alexander Pirsig <apirsig@web.de>",
-  "contributors": [ 
-    { "name": "Alexander Pirsig", "email": "apirsig@web.de" }
-  ],
+  "contributors": [],
   "dependencies": {
     "connect": ">= 1.0.1 < 2.0.0",
   },
