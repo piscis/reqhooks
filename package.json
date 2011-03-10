@@ -1,0 +1,17 @@
+{
+  "name": "url-normalize",
+  "description": "A small set of filters that can be used to enforce url-schemas",
+  "version": "0.0.1alpha",
+  "author": "Alexander Pirsig <apirsig@web.de>",
+  "contributors": [ 
+    { "name": "Alexander Pirsig", "email": "apirsig@web.de" }
+  ],
+  "dependencies": {
+    "connect": ">= 1.0.1 < 2.0.0",
+  },
+  "keywords": ["hook", "filter", "url", "normalization", "url-schema"],
+  "main": "index",
+  "directories" : { "lib" : "./lib" },
+  "bin": { "express": "./bin/express" },
+  "engines": { "node": ">= 0.4.1 < 0.5.0" }
+}
