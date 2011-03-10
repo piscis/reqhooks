@@ -5,11 +5,10 @@
   "author": "Alexander Pirsig <apirsig@web.de>",
   "contributors": [],
   "dependencies": {
-    "connect": ">= 1.0.1 < 2.0.0",
+    "connect": ">= 1.0.1 < 2.0.0"
   },
   "keywords": ["hook", "filter", "url", "normalization", "url-schema"],
   "main": "index",
   "directories" : { "lib" : "./lib" },
-  "bin": { "express": "./bin/express" },
   "engines": { "node": ">= 0.4.1 < 0.5.0" }
 }

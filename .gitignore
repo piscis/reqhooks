@@ -2,3 +2,4 @@
 .*.swp
 ._*
 *.log
+node_modules

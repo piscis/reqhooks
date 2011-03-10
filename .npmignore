@@ -1,0 +1,5 @@
+.git*
+docs/
+test/
+testing.js
+.DS_Store
