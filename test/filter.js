@@ -42,6 +42,32 @@ module.exports = testCase({
 		filter(req,res,next);
 	},
 	
+	
+	testForRedirectLoop: function(test) {
+	
+		test.expect(1);
+		
+		var filter = this.normalizer({});
+		var fixture = {'input':'/abcd?123=abc','output':'/abcd?123=abc'};
+		var req = {};
+		req.originalUrl = fixture['input'];
+
+		var res = {};
+		res.redirect = function(location,code) {
+			test.ok(false,'Test failed should never reach redirect got location: '+location+' input was '+req.originalUrl);
+			test.done();
+		}
+		
+		var next = function(data){
+			test.ok(true,'Test should trigger next');
+			test.done();
+		};
+		
+		// Start filter;
+		filter(req,res,next);
+	},
+	
+	
 	testLastSlashIsRemovedWithGetParams: function(test) {
 	
 		test.expect(1);
