@@ -1,13 +1,13 @@
 {
-  "name": "url-normalize",
-  "description": "A small set of filters that can be used to enforce url-schemas",
+  "name": "reqhook",
+  "description": 'reqhook is a prepend filter for the connect server stack to apply url filter rules to the response object before the reach the router.',
   "version": "0.0.1alpha",
   "author": "Alexander Pirsig <apirsig@web.de>",
   "contributors": [],
   "dependencies": {
     "connect": ">= 1.0.1 < 2.0.0"
   },
-  "keywords": ["hook", "filter", "url", "normalization", "url-schema"],
+  "keywords": ["hook", "filter", "url", "normalization", "url-schema", "request"],
   "main": "index",
   "directories" : { "lib" : "./lib" },
   "engines": { "node": ">= 0.4.1 < 0.5.0" }

@@ -4,7 +4,8 @@ module.exports = testCase({
 
 	setUp: function (callback) {
 		
-		this.normalizer = require(__dirname+'/../index');
+		// Exposing filter
+		this.normalizer = require(__dirname+'/../index').filter;
 		
 		this.req = {};
 		this.res = {};
