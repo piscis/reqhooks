@@ -1,6 +1,6 @@
 {
   "name": "reqhooks",
-  "description": '"reqhooks" is a prepend filter lib for the connect server stack to apply url filter rules to the response object before the reach the router',
+  "description": "'reqhooks' is a prepend filter lib for the connect server stack to apply url filter rules to the response object before the reach the router",
   "version": "0.0.1alpha",
   "author": "Alexander Pirsig <apirsig@web.de>",
   "contributors": [],
