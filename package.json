@@ -1,12 +1,18 @@
 {
   "name": "reqhooks",
   "description": "'reqhooks' is a prepend filter lib for the connect server stack to apply url filter rules to the response object before the reach the router",
-  "version": "0.0.2alpha2",
+  "version": "0.0.2alpha3",
   "author": "Alexander Pirsig <apirsig@web.de>",
   "contributors": [],
   "dependencies": {
     "connect": ">= 1.0.1 < 2.0.0"
   },
+  "repositories": [
+   {
+      "type": "git",
+      "url": "git://github.com/piscis/reqhooks.git" 
+    } 
+  ],
   "keywords": ["hook", "filter", "url", "normalization", "url-schema", "request", "prepend", "express", "connect"],
   "main": "index",
   "directories" : { "lib" : "./lib" },
