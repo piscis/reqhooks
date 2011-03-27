@@ -19,17 +19,17 @@ The good thing about the filter hook is, you can customize it to your needs. The
 *  **stripLastSlash** - Make sure your urls not ending with a **/** 
 *  **noneAlnum** - Removes everything but alphanumeric characters, **.** and **/** 
 
-[Example](http://github.com/piscis/reqhooks/examples/filter/app.js "See the example")  
+[Example](http://github.com/piscis/reqhooks/blob/master/examples/filter/app.js "See the example")  
 
 ### Header hook
 The header hook is the point where you append headers to the response global before they going back to the client. For example if you have to send out P3P headers on your side this might be the right place to add them.
 
-[Example](http://github.com/piscis/reqhooks/examples/header/app.js "See the example")
+[Example](http://github.com/piscis/reqhooks/blob/master/examples/header/app.js "See the example")  
 
 ### Redirect hook
 The redirect hook takes routes for you´re side and redirects them to a existing route. To make your ''app.js'' small and clean you can prepare a external configuration and add it to the redirect hook definition. 
   
-[Example](http://github.com/piscis/reqhooks/examples/redirect/app.js "See the example")  
+[Example](http://github.com/piscis/reqhooks/blob/master/examples/redirect/app.js "See the example")  
 
 ## License
 (The MIT License)
