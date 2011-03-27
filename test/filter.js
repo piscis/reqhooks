@@ -195,7 +195,7 @@ module.exports = testCase({
 		test.expect(1);
 		
 		var filter = this.normalizer({filterChain:['noneAlnum']});
-		var fixture = {'input':'/1234&/%$$$adsf/asdf.gif','output':'/1234/adsf/asdf.gif'};
+		var fixture = {'input':'/1234&%20/%$$$adsf/asdf.gif','output':'/1234/adsf/asdf.gif'};
 		var req = {};
 		req.originalUrl = fixture['input'];
 
@@ -250,7 +250,7 @@ module.exports = testCase({
 			}
 		}
 		
-		var filter = this.normalizer({chain:['stripLastSlash','filterName'],filterList:customFilter});
+		var filter = this.normalizer({filterChain:['stripLastSlash','filterName'],filterList:customFilter});
 		var fixture = {'input':'/AAA','output':'/BBB'};
 		var req = {};
 		req.originalUrl = fixture['input'];
