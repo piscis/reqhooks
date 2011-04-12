@@ -1,3 +1,6 @@
+# 0.0.2alpha4 / 2011-04-12
+* if req.protoc0l is set, url filtering redirects and takes the protocol in consideration
+
 # 0.0.2alpha3 / 2011-03-27
 * now hook: header available to add global headers to response
 * fixed a bug when a parameter was encoded in url path
