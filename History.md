@@ -1,3 +1,6 @@
+# 0.0.2alpha5 / 2011-04-12
+* hotfixing a bug introduced by 0.0.2alpha4
+
 # 0.0.2alpha4 / 2011-04-12
 * if req.protoc0l is set, url filtering redirects and takes the protocol in consideration
 
