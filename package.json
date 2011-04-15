@@ -1,20 +1,32 @@
 {
   "name": "reqhooks",
   "description": "'reqhooks' is a prepend filter lib for the connect server stack to apply url filter rules to the response object before the reach the router",
-  "version": "0.0.2alpha5",
+  "version": "0.0.3",
+  "homepage" : "http://github.com/piscis/reqhooks",
   "author": "Alexander Pirsig <apirsig@web.de>",
   "contributors": [],
   "dependencies": {
     "connect": ">= 1.0.1 < 2.0.0"
   },
-  "repositories": [
-   {
-      "type": "git",
-      "url": "git://github.com/piscis/reqhooks.git" 
-    } 
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/piscis/reqhooks" 
+  },
+  "bugs": {
+    "mail": "apirsig@web.de",
+    "web": "http://github.com/piscis/reqhooks/issues"  
+  },
+  "keywords": [ 
+    "hook", "filter", "url", 
+    "normalization", "schema", "request", 
+    "prepend", "express", "connect", "servlet filter",
+    "hooks", "pre", "post", "header", "url normalization",
+    "seo", "p3p", "redirect"
   ],
-  "keywords": ["hook", "filter", "url", "normalization", "url-schema", "request", "prepend", "express", "connect"],
   "main": "index",
   "directories" : { "lib" : "./lib" },
-  "engines": { "node": ">= 0.4.1 < 0.5.0" }
+  "engines": { "node": ">= 0.4.1 < 0.5.0" },
+  "licenses" : [
+    { "type" : "MIT", "url" : "https://github.com/piscis/reqhooks/blob/master/LICENSE" }
+  ]
 }

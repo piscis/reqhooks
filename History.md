@@ -1,3 +1,6 @@
+# 0.0.3 / 2011-04-15
+* Bumping Version + extending package.json infos
+
 # 0.0.2alpha5 / 2011-04-12
 * hotfixing a bug introduced by 0.0.2alpha4
 
