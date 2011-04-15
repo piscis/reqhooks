@@ -35,11 +35,43 @@ module.exports = testCase({
 		
 		res.redirect = function(location,code) {
 			
-			var toFix = list['to'];
-			var codeFix = list['code'];
+			var toFixture = list['to'];
+			var codeFixture = list['code'];
 			
-			test.ok(location==toFix,'Failure expected: '+toFix+' but got '+location);
-			test.ok(code==codeFix,'Failure expected response code: '+codeFix+' but got '+code);
+			test.ok(location==toFixture,'Failure expected: '+toFixture+' but got '+location);
+			test.ok(code==codeFixture,'Failure expected response code: '+codeFixture+' but got '+code);
+			test.done();
+		}
+		
+		var next = function(data){
+			test.ok(false,'Test failed should never reach next');
+			test.done();
+		};
+		
+		// Start filter;
+		redirect(req,res,next);
+	},
+
+	testSingleGetParameterRedirect: function(test) {
+	
+		test.expect(2);
+		
+		var list = {from: '/blabla?blabla=haha', to:'/cawabunga', code:302};
+		
+		var redirect = this.plugin({'list':list});
+		var req = {};
+		
+		req.originalUrl = '/blabla?blabla=haha';
+
+		var res = {};
+		
+		res.redirect = function(location,code) {
+			
+			var toFixture = list['to'];
+			var codeFixture = list['code'];
+			
+			test.ok(location==toFixture,'Failure expected: '+toFixture+' but got '+location);
+			test.ok(code==codeFixture,'Failure expected response code: '+codeFixture+' but got '+code);
 			test.done();
 		}
 		
@@ -63,7 +95,6 @@ module.exports = testCase({
 			{from: '/foobar_1', to:'/new_foobar_1',  code: 301},
 		];
 		
-		
 		var redirect = this.plugin({'list':list});
 		var req = {};
 		
@@ -73,11 +104,11 @@ module.exports = testCase({
 		
 		res.redirect = function(location,code) {
 			
-			var toFix = list[2]['to'];
-			var codeFix = list[2]['code'];
+			var toFixture = list[2]['to'];
+			var codeFixture = list[2]['code'];
 			
-			test.ok(location==toFix,'Failure expected: '+toFix+' but got '+location);
-			test.ok(code==codeFix,'Failure expected response code: '+codeFix+' but got '+code);
+			test.ok(location==toFixture,'Failure expected: '+toFixture+' but got '+location);
+			test.ok(code==codeFixture,'Failure expected response code: '+codeFixture+' but got '+code);
 			test.done();
 		}
 		

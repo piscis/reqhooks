@@ -1,3 +1,6 @@
+# 0.0.4 / 2011-04-15 (2)
+* Allow GET-parameter in redirect urls
+
 # 0.0.3 / 2011-04-15
 * Bumping Version + extending package.json infos
 
